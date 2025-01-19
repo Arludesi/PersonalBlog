@@ -17,10 +17,5 @@ RUN gem install jekyll
 # 设置工作目录权限
 RUN chown -R root:root /srv/app
 
-# 安装 Minima 最新版本
-# RUN echo 'source "https://rubygems.org"\ngem "minima", "~> 2.5"' > Gemfile
-# RUN bundle install
-
-
 # 默认命令为保持前台进程
 CMD ["tail", "-f", "/dev/null"]
