@@ -1,8 +1,9 @@
 services:
   jekyll:
+    build: .
     image: jekyll
     container_name: jekyll
     volumes:
-      - .:/srv/app
+      - ./docs:/srv/app
     ports:
       - 4000:4000
