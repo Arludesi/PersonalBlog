@@ -1,9 +1,9 @@
 services:
   jekyll:
-    image: jekyll/jekyll:latest
-    container_name: jekyll_blog
+    image: jekyll
+    container_name: jekyll
     volumes:
-      - .:/srv/jekyll
+      - ./jekyll_data:/srv/app
     ports:
-      - "4000:4000"
-    command: jekyll serve --watch --host 0.0.0.0
+      - 4000:4000
+    # command: jekyll serve --watch --host 0.0.0.0 --trace
